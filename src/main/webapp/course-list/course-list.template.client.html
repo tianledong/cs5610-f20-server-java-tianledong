@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course List | Whiteboard</title>
+    <script src="https://kit.fontawesome.com/ba441c10d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="./course-list.style.client.css" rel="stylesheet" type="text/css">
+</head>
+<body class="wbdv-gray-bg">
+<header>
+    <nav class="navbar navbar-expand navbar-dark bg-primary fixed-top">
+        <button class="navbar-brand btn wbdv-field wbdv-hamburger">
+            <i class="fas fa-bars text-light "></i>
+        </button>
+        <div class="d-none d-md-block">
+            <a class="navbar-brand wbdv-label wbdv-course-manager" href="#">Course Manager</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav ml-auto">
+                <form class="form-inline row">
+                    <input class="form-control mr-2 col-9 wbdv-field wbdv-new-course" type="text"
+                           placeholder="New Course Title">
+                    <button class="btn col-2 m-1 mr-2 wbdv-field wbdv-add-course"><i
+                            class="fas fa-plus"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="d-none d-md-block navbar navbar-expand wbdv-gray-bg container">
+        <div class="navbar-nav nav">
+            <h6 class="col-6 pt-2 wbdv-header wbdv-title"><strong>Title</strong></h6>
+            <h6 class="col-2 pt-2 wbdv-header wbdv-owner"><strong>Owned by</strong></h6>
+            <h6 class="col-2 pt-2 wbdv-header wbdv-last-modified"><strong>Last modified</strong>
+            </h6>
+            <div class="row-cols-2 float-right text-right">
+                <button type="button" class="btn col-3 wbdv-button wbdv-grid-layout">
+                    <i class="fas fa-lg fa-grip-horizontal"></i>
+                </button>
+                <button type="button" class="btn col-3 wbdv-button wbdv-list-layout">
+                    <i class="fas fa-lg fa-sort-alpha-down"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div>
+            <p class="text-muted mt-2 wbdv-header wbdv-sort">Today</p>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5500 Foundations
+                        of Software Engineering</a>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    9:45am
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-button wbdv-delete"><i class="fas fa-times m-1"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row bg-white m-0 border pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5100 Foundations
+                        of Artificial Intelligence</a>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    7:29am
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-button wbdv-delete"><i class="fas fa-times m-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="text-muted mt-2 wbdv-header wbdv-sort">Yesterday</p>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5610 Web
+                        Development</a>
+                    <i class="fas fa-user-friends text-muted ml-1 pt-1 d-none d-md-block"></i>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    10:15pm
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-row wbdv-button wbdv-delete"><i
+                            class="fas fa-times m-1"></i></button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="text-muted mt-2 wbdv-header wbdv-sort">Previous 7 days</p>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5800
+                        Algorithms</a>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    11:31pm
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-button wbdv-delete"><i class="fas fa-times m-1"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5600 Computer
+                        Systems</a>
+                    <i class="fas fa-user-friends text-muted ml-1 pt-1 d-none d-md-block"></i>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    9:50pm
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-row wbdv-button wbdv-delete"><i
+                            class="fas fa-times m-1"></i></button>
+                </div>
+            </div>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5200 Database
+                        Management Systems</a>
+                    <i class="fas fa-user-friends text-muted ml-1 pt-1 d-none d-md-block"></i>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    6:56pm
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-row wbdv-button wbdv-delete"><i
+                            class="fas fa-times m-1"></i></button>
+                </div>
+            </div>
+            <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
+                <div class="my-2 col-md-5 col-9 d-flex">
+                    <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
+                    <a class="wbdv-row wbdv-title"
+                       href="../course-editor/course-editor.template.client.html">CS5700
+                        Fundamentals of Computer Networking</a>
+                </div>
+                <div class="d-none d-md-block m-2 col-3 text-center wbdv-row wbdv-owner">Me
+                </div>
+                <div class="d-none d-md-block m-2 col-2 text-left wbdv-row wbdv-modified-date">
+                    1:28pm
+                </div>
+                <div class="col-1 text-center">
+                    <button class="btn wbdv-row wbdv-button wbdv-delete"><i
+                            class="fas fa-times m-1"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn wbdv-button wbdv-add-course-abs">
+        <i class="fas fa-3x text-primary fa-plus-circle"></i></button>
+</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+    padding-top: 65px ;
+}
+.fa-plus{
+    color: white;
+    font-size: 1.6rem;
+    transition: 0.2s linear all;
+}
+.fa-plus:hover{
+    color: silver;
+}
+
+.wbdv-gray-bg {
+    background: #eeeeee;
+}
+.wbdv-add-course-abs{
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+}
