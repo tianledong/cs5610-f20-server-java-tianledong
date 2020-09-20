@@ -21,3 +21,9 @@
 .react-img {
     max-width: 500px;
 }
+
+.wbdv-add-widget-fixed{
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+}
