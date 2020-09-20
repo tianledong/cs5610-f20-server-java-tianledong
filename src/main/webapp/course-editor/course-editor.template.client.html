@@ -9,12 +9,14 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
           crossorigin="anonymous">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
     <link href="./course-editor.style.client.css" rel="stylesheet" type="text/css">
 </head>
 <body class="bg-dark">
 <header>
-    <nav class="navbar navbar-expand navbar-dark">
-        <a class="navbar-brand btn wbdv-course-editor wbdv-close" href="../course-list/course-list.template.client.html">
+    <nav class="navbar navbar-expand navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand btn wbdv-course-editor wbdv-close"
+           href="../course-list/course-list.template.client.html">
             <i class="fas fa-times fa-lg text-light"></i>
         </a>
 
@@ -23,71 +25,78 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Build</a>
+                <li class="nav-item">
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Build</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link wbdv-page-tab" href="#">Pages</a>
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Pages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Theme</a>
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Theme</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Apps</a>
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Apps</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link wbdv-lesson-tabs" href="#">Settings</a>
                 </li>
             </ul>
-            <button class="btn col-2 m-1 mr-2 wbdv-new-page-btn text-white"><i
+            <button class="btn col-2 m-1 mr-2 wbdv-lesson-add-btn text-white"><i
                     class="fas fa-lg fa-plus"></i></button>
         </div>
     </nav>
 </header>
-<main class="row m-0 wbdv-main-h">
-    <div class="col-lg-3 col-md-4 col-sm-5 border-top border-bottom border-secondary">
+<main class="row m-0 wbdv-fixed-padding">
+    <div class="col-lg-3 col-md-4 col-sm-5 border-top border-bottom border-secondary bg-dark">
         <ul class="nav nav-pills nav-fill p-3 wbdv-module-list">
             <li class="nav-item nav-link d-flex w-100 m-2 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 1 - jQuery</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 1
+                - jQuery</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link active d-flex w-100 wbdv-bg m-2 wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 2 - React</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 2
+                - React</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link m-2 d-flex w-100 m-2 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 3 - Redux</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 3
+                - Redux</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link m-2 d-flex w-100 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 4 - Native</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 4
+                - Native</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link m-2 d-flex w-100 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 5 - Angular</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 5
+                - Angular</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link m-2 d-flex w-100 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 6 - Node</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 6
+                - Node</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
             </li>
             <li class="nav-item nav-link m-2 d-flex w-100 wbdv-bg wbdv-module-item"><a
-                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 7 - Mongo</a>
+                    class="col-10 wbdv-module-item-title text-left wbdv-module-item-title">Module 7
+                - Mongo</a>
                 <button class="btn wbdv-course-editor wbdv-close col-2 ml-auto wbdv-module-item-delete-btn">
                     <i class="fas fa-times fa-lg text-light"></i>
                 </button>
@@ -102,17 +111,17 @@
     </div>
     <div class="col-lg-9 col-md-8 col-sm-7 bg-white p-3">
         <ul class="nav nav-pills wbdv-topic-pill-list w-100 wbdv-topic-pill-list">
-            <li class="nav-item m-2 wbdv-bg wbdv-topic-pill">
-                <a class="nav-link btn" href="#">Topic 1</a>
+            <li class="nav-item m-2 wbdv-bg">
+                <a class="nav-link btn wbdv-topic-pill" href="#">Topic 1</a>
             </li>
-            <li class="nav-item m-2 wbdv-bg wbdv-topic-pill">
+            <li class="nav-item m-2 wbdv-bg">
                 <a class="nav-link active h-100 btn" href="#">Topic 2</a>
             </li>
-            <li class="nav-item m-2 wbdv-bg wbdv-topic-pill">
-                <a class="nav-link wbdv-bg btn" href="#">Topic 3</a>
+            <li class="nav-item m-2 wbdv-bg">
+                <a class="nav-link wbdv-bg btn wbdv-topic-pill" href="#">Topic 3</a>
             </li>
-            <li class="nav-item m-2 wbdv-bg wbdv-topic-pill">
-                <a class="nav-link wbdv-bg btn" href="#">Topic 4</a>
+            <li class="nav-item m-2 wbdv-bg">
+                <a class="nav-link wbdv-bg btn wbdv-topic-pill" href="#">Topic 4</a>
             </li>
             <li class="nav-item m-2 wbdv-bg wbdv-topic-pill">
                 <button class="nav-link wbdv-topic-add-btn wbdv-bg btn"><i
@@ -129,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div class="border rounded mt-2">
+        <div class="border rounded my-4">
             <div class="row mx-1 my-2">
                 <div class="col-md-7 pl-2">
                     <h5 class="mt-2">Heading Widget</h5>
@@ -142,11 +151,10 @@
                         <i class="fas fa-arrow-down"></i>
                     </div>
                     <select class="custom-select m-1">
-                        <option>Heading</option>
-                        <option>YouTube</option>
-                        <option>Slides</option>
-                        <option>Image</option>
-                        <option>List</option>
+                        <option value="heading" selected>Heading</option>
+                        <option value="paragraph">Paragraph</option>
+                        <option value="list">List</option>
+                        <option value="image">Image</option>
                     </select>
                     <div class="btn btn-danger m-1">
                         <i class="fas fa-times"></i>
@@ -155,12 +163,15 @@
             </div>
             <div class="row mx-1 my-2">
                 <div class="col p-2">
-                    <input type="text" class="form-control" placeholder="Heading text">
+                    <label for="heading-widget-text">Heading Text</label>
+                    <input type="text" class="form-control" id="heading-widget-text"
+                           placeholder="Heading text">
                 </div>
             </div>
             <div class="row mx-1 my-2">
                 <div class="col p-2">
-                    <select class="custom-select">
+                    <label for="heading-widget-size">Heading Size</label>
+                    <select class="custom-select" id="heading-widget-size">
                         <option>Heading 1</option>
                         <option>Heading 2</option>
                         <option>Heading 3</option>
@@ -172,7 +183,9 @@
             </div>
             <div class="row mx-1 my-2">
                 <div class="col p-2">
-                    <input type="text" class="form-control" placeholder="Widget name">
+                    <label for="heading-widget-name">Widget Name</label>
+                    <input type="text" class="form-control" id="heading-widget-name"
+                           placeholder="Widget name">
                 </div>
             </div>
             <div class="row mx-1 my-2">
@@ -182,10 +195,174 @@
             </div>
             <div class="row mx-1 my-2">
                 <div class="col p-2">
-                    <h2>Heading Text</h2>
+                    <h1>Heading Text</h1>
                 </div>
             </div>
         </div>
+        <div class="border rounded my-4">
+            <div class="row mx-1 my-2">
+                <div class="col-md-7 pl-2">
+                    <h5 class="mt-2">Paragraph Widget</h5>
+                </div>
+                <div class="col-md-4 d-flex ml-auto pr-0">
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <select class="custom-select m-1">
+                        <option value="heading">Heading</option>
+                        <option value="paragraph" selected>Paragraph</option>
+                        <option value="list">List</option>
+                        <option value="image">Image</option>
+                    </select>
+                    <div class="btn btn-danger m-1">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="paragraph-widget-text">Paragraph Text</label>
+                    <textarea class="form-control" id="paragraph-widget-text" rows="3"
+                              placeholder="React is an open-source JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications."></textarea>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="paragraph-widget-name">Widget Name</label>
+                    <input type="text" class="form-control" id="paragraph-widget-name"
+                           placeholder="Widget name">
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <h5>Preview</h5>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <p>React is an open-source JavaScript library for building user interfaces or UI
+                        components. It is maintained by Facebook and a community of individual
+                        developers and companies. React can be used as a base in the development of
+                        single-page or mobile applications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="border rounded my-4">
+            <div class="row mx-1 my-2">
+                <div class="col-md-7 pl-2">
+                    <h5 class="mt-2">List Widget</h5>
+                </div>
+                <div class="col-md-4 d-flex ml-auto pr-0">
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <select class="custom-select m-1">
+                        <option value="heading">Heading</option>
+                        <option value="paragraph">Paragraph</option>
+                        <option value="list" selected>List</option>
+                        <option value="image">Image</option>
+                    </select>
+                    <div class="btn btn-danger m-1">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="list-widget-item">List Item</label>
+                    <textarea class="form-control" id="list-widget-item" rows="3" placeholder="Basic usage
+Notable features
+Common idioms"></textarea>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="list-widget-type">List Type</label>
+                    <select class="custom-select" id="list-widget-type">
+                        <option selected>Ordered List</option>
+                        <option>Unordered List</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="list-widget-name">Widget Name</label>
+                    <input type="text" class="form-control" id="list-widget-name"
+                           placeholder="Widget name">
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <h5>Preview</h5>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <ol>
+                        <li>Basic usage</li>
+                        <li>Notable features</li>
+                        <li>Common idioms</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="border rounded my-4">
+            <div class="row mx-1 my-2">
+                <div class="col-md-7 pl-2">
+                    <h5 class="mt-2">Image Widget</h5>
+                </div>
+                <div class="col-md-4 d-flex ml-auto pr-0">
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="btn btn-warning m-1">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <select class="custom-select m-1">
+                        <option value="heading">Heading</option>
+                        <option value="paragraph">Paragraph</option>
+                        <option value="list">List</option>
+                        <option value="image" selected>Image</option>
+                    </select>
+                    <div class="btn btn-danger m-1">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="image-widget-url">Image URL</label>
+                    <input class="form-control" id="image-widget-url"
+                           placeholder="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+                </div>
+
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <label for="image-widget-name">Widget Name</label>
+                    <input type="text" class="form-control" id="image-widget-name"
+                           placeholder="Widget name">
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <h5>Preview</h5>
+                </div>
+            </div>
+            <div class="row mx-1 my-2">
+                <div class="col p-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                         alt="react-img" class="react-img">
+                </div>
+            </div>
+        </div>
+
         <div class="row mx-1 my-2">
             <button class="ml-auto btn btn-success">
                 <i class="fas fa-plus"></i>

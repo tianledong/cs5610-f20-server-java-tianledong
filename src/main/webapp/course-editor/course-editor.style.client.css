@@ -1,21 +1,23 @@
-body,
-html {
-    height: 100%;
-}
 .wbdv-bg {
     color: white;
     background: #4c5154;
 }
-.wbdv-module-item-title{
+
+.wbdv-fixed-padding {
+    padding-top: 65px;
+}
+
+.wbdv-module-item-title {
     padding: 0.3rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;
 }
+
 .wbdv-bg a {
     color: white;
     cursor: pointer;
 }
-.wbdv-main-h {
-    height: calc(100% - 62px);
+.react-img {
+    max-width: 500px;
 }
