@@ -34,18 +34,21 @@
     </nav>
 </header>
 <main class="wbdv-fixed-padding">
-    <div class="d-none d-md-block navbar navbar-expand wbdv-gray-bg container">
+    <div class="d-none d-lg-block navbar navbar-expand wbdv-gray-bg container">
         <div class="navbar-nav nav row">
             <h6 class="col-6 pt-2 wbdv-header wbdv-title"><strong>Title</strong></h6>
-            <h6 class="col-2 pt-2 wbdv-header wbdv-owner"><strong>Owned by</strong></h6>
-            <h6 class="col-2 pt-2 wbdv-header wbdv-last-modified"><strong>Last modified</strong>
+            <div class="col-2 pt-2 row">
+                <h6 class="wbdv-header wbdv-owner text-center"><strong>Owned by</strong></h6>
+                <button class="btn wbdv-btn-abs wbdv-header wbdv-sort"><i class="mb-2 fa fa-sort-desc fa-lg"></i></button>
+            </div>
+            <h6 class="col-2 pt-2 wbdv-header wbdv-last-modified text-center"><strong>Last modified</strong>
             </h6>
             <div class="row-cols-2 float-right text-right">
                 <button type="button" class="btn col-5 wbdv-button wbdv-grid-layout">
                     <i class="fas fa-lg fa-grip-horizontal"></i>
                 </button>
                 <button type="button" class="btn col-5 wbdv-button wbdv-list-layout">
-                    <i class="fas fa-lg fa-sort-alpha-down"></i>
+                    <i class="fas fa-lg fa-sort-alpha-down mb-1"></i>
                 </button>
             </div>
         </div>
@@ -53,7 +56,7 @@
     </div>
     <div class="container">
         <div>
-            <p class="text-muted mt-2 wbdv-header wbdv-sort">Today</p>
+            <p class="text-muted mt-2">Today</p>
             <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
                 <div class="my-2 col-md-5 col-9 d-flex">
                     <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
@@ -107,7 +110,7 @@
             </div>
         </div>
         <div>
-            <p class="text-muted mt-2 wbdv-header wbdv-sort">Yesterday</p>
+            <p class="text-muted mt-2">Yesterday</p>
             <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
                 <div class="my-2 col-md-5 col-9 d-flex">
                     <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>
@@ -146,7 +149,7 @@
             </div>
         </div>
         <div>
-            <p class="text-muted mt-2 wbdv-header wbdv-sort">Previous 7 days</p>
+            <p class="text-muted mt-2">Previous 7 days</p>
             <div class="row bg-white m-0 border wbdv-row wbdv-course pt-1">
                 <div class="my-2 col-md-5 col-9 d-flex">
                     <i class="fas fa-file-alt text-primary m-1 wbdv-row wbdv-icon"></i>

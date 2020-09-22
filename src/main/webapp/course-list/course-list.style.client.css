@@ -18,3 +18,8 @@
     bottom: 2%;
     right: 1%;
 }
+.wbdv-btn-abs{
+    position: relative;
+    right: -6px;
+    top: -11px;
+}
