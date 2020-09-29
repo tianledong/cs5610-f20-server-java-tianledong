@@ -95,7 +95,7 @@
         $usernameFld.val('');
         $firstNameFld.val('');
         $lastNameFld.val('');
-        $roleFld.val('')
+        $roleFld.val('FACULTY')
     }
 
     const main = () => {
