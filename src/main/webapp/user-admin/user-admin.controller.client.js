@@ -22,6 +22,7 @@
         };
         userService.createUser(newUser)
             .then(clearFld)
+            .then($updateBtn.off('click'))
             .then(findAllUsers);
     };
 
