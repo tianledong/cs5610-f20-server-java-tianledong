@@ -8,7 +8,9 @@ function AdminUserServiceClient() {
     const self = this;
 
     function findAllUsers() {
-        return fetch(`${self.url}`)
+        return fetch(`${self.url}`, {
+            method: 'GET'
+        })
             .then(response => response.json())
     }
 

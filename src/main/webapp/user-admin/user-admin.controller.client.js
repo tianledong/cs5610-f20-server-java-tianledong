@@ -62,8 +62,8 @@
             role: role
         };
         userService.updateUser(id, user)
-            .then(findAllUsers)
             .then($updateBtn.off('click'))
+            .then(findAllUsers)
             .then(clearFld);
     };
 
