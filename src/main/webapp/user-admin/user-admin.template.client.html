@@ -13,7 +13,7 @@
     <link href="./user-admin.style.client.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../services/user.service.client.js"></script>
-    <script src="user-admin.controller.client.js"></script>
+    <script src="./user-admin.controller.client.js"></script>
 </head>
 <body>
 <div class="container h-100">
@@ -40,15 +40,15 @@
             <td><input id="lastNameFld" class="form-control"
                        placeholder="Last Name"/></td>
             <td><select id="roleFld" class="form-control">
-                <option value="FACULTY">Faculty</option>
+                <option selected value="FACULTY">Faculty</option>
                 <option value="STUDENT">Student</option>
                 <option value="ADMIN">Admin</option>
             </select></td>
             <td>
                     <span class="float-right wbdv-nowarp">
-                        <button class="btn"><i class="fa-2x fa fa-search wbdv-search"></i></button>
-                        <button class="btn"><i class="fa-2x fa fa-plus wbdv-create"></i></button>
-                        <button class="btn"><i class="fa-2x fa fa-check wbdv-update"></i></button>
+                        <button class="btn wbdv-search p-0"><i class="fa-2x fa fa-search"></i></button>
+                        <button class="btn wbdv-create p-0"><i class="fa-2x fa fa-plus"></i></button>
+                        <button class="btn wbdv-update p-0"><i class="fa-2x fa fa-check"></i></button>
                       </span>
             </td>
         </tr>
@@ -62,8 +62,8 @@
             <td class="wbdv-role">FACULTY</td>
             <td class="wbdv-actions">
                     <span class="float-right">
-                        <button class="btn"><i class="fa-2x fa fa-times wbdv-remove"></i></button>
-                        <button class="btn"><i class="fa-2x fa fa-pencil wbdv-edit"></i></button>
+                        <button class="btn wbdv-remove p-0"><i class="fa-2x fa fa-times"></i></button>
+                        <button class="btn wbdv-edit p-0"><i class="fa-2x fa fa-pencil"></i></button>
                     </span>
             </td>
         </tr>
