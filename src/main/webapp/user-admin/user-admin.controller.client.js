@@ -30,9 +30,7 @@
             .then((users) => renderUsers(users));
     };
 
-    const findUserById = (id) => {
-        return userService.findUserById(id);
-    }
+    const findUserById = (id) => userService.findUserById(id);
 
     const selectUser = (id) => {
         findUserById(id)
