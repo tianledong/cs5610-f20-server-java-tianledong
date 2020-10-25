@@ -1,8 +1,8 @@
-package com.example.cs5610f20serverjavatianledong.services;
+package com.example.cs5610f20serverjavatianledong.models;
 
 public class Widget {
   private String name;
-  private Integer id;
+  private String id;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -14,7 +14,7 @@ public class Widget {
   private String style;
   private String value;
 
-  public Widget(String name, Integer id, String type, Integer widgetOrder, String text, String src, Integer size, Integer width, Integer height, String cssClass, String style, String value) {
+  public Widget(String name, String id, String type, Integer widgetOrder, String text, String src, Integer size, Integer width, Integer height, String cssClass, String style, String value) {
     this.name = name;
     this.id = id;
     this.type = type;
@@ -39,11 +39,11 @@ public class Widget {
     this.name = name;
   }
 
-  public Integer getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(String id) {
     this.id = id;
   }
 
