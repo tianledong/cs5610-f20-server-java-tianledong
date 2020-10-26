@@ -2,10 +2,13 @@ package com.example.cs5610f20serverjavatianledong.services;
 
 import com.example.cs5610f20serverjavatianledong.models.Widget;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class WidgetService {
   List<Widget> widgets = new ArrayList<>();
 
