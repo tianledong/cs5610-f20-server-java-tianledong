@@ -3,6 +3,7 @@ package com.example.cs5610f20serverjavatianledong.models;
 public class Widget {
   private String name;
   private String id;
+  private String topicId;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -14,21 +15,12 @@ public class Widget {
   private String style;
   private String value;
 
-  public Widget(String name, String id, String type, Integer widgetOrder, String text, String src, Integer size, Integer width, Integer height, String cssClass, String style, String value) {
-    this.name = name;
-    this.id = id;
-    this.type = type;
-    this.widgetOrder = widgetOrder;
-    this.text = text;
-    this.src = src;
-    this.size = size;
-    this.width = width;
-    this.height = height;
-    this.cssClass = cssClass;
-    this.style = style;
-    this.value = value;
+  public String getTopicId() {
+    return topicId;
   }
-  public Widget() {
+
+  public void setTopicId(String topicId) {
+    this.topicId = topicId;
   }
 
   public String getName() {
