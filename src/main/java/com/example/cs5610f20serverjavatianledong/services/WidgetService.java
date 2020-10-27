@@ -24,6 +24,16 @@ public class WidgetService {
     return null;
   }
 
+  public int updateAllWidgets(String tid, List<Widget> newWidgets) {
+    removeAllWidgets(tid, widgets);
+    widgets.addAll(newWidgets);
+    return 1;
+  }
+
+  private void removeAllWidgets(String tid, List<Widget> widgets) {
+    widgets.removeIf(widget -> widget.getTopicId().equals(tid));
+  }
+
   public Widget createWidget(String tid, Widget widget) {
     String uuid = UUID.randomUUID().toString();
     widget.setId(uuid);

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class WidgetController {
   WidgetService service;
 
   @PostMapping("/api/topics/{tid}/widgets")
-  public Widget createWidget(@PathVariable("tid") String tid, Widget widget) {
+  public Widget createWidget(@PathVariable("tid") String tid, @RequestBody Widget widget) {
     return service.createWidget(tid, widget);
   }
 
@@ -31,8 +32,13 @@ public class WidgetController {
   }
 
   @PutMapping("/api/widgets/{wid}")
-  public int updateWidget(@PathVariable("wid") String wid, Widget widget) {
+  public int updateWidget(@PathVariable("wid") String wid, @RequestBody Widget widget) {
     return service.updateWidget(wid, widget);
+  }
+
+  @PutMapping("/api/topics/{tid}/widgets")
+  public int updateAllWidget(@PathVariable("tid") String tid, @RequestBody List<Widget> widgets) {
+    return service.updateAllWidgets(tid, widgets);
   }
 
   @DeleteMapping("/api/widgets/{wid}")
