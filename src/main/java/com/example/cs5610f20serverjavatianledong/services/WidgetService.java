@@ -31,8 +31,20 @@ public class WidgetService {
     return 1;
   }
 
+  private int maxWidgetOrderForTopic(String tid) {
+    List<Widget> tWidgets = widgetRepository.findWidgetsForTopic(tid);
+    int maxOrder = -1;
+    for (Widget widget : tWidgets) {
+      if (widget.getWidgetOrder() > maxOrder) {
+        maxOrder = widget.getWidgetOrder();
+      }
+    }
+    return maxOrder;
+  }
+
   public Widget createWidget(String tid, Widget widget) {
     widget.setTopicId(tid);
+    widget.setWidgetOrder(maxWidgetOrderForTopic(tid) + 1);
     return widgetRepository.save(widget);
   }
 
