@@ -32,7 +32,7 @@ public class WidgetController {
   }
 
   @PutMapping("/api/widgets/{wid}")
-  public int updateWidget(@PathVariable("wid") String wid, @RequestBody Widget widget) {
+  public int updateWidget(@PathVariable("wid") Integer wid, @RequestBody Widget widget) {
     return service.updateWidget(wid, widget);
   }
 
@@ -42,7 +42,7 @@ public class WidgetController {
   }
 
   @DeleteMapping("/api/widgets/{wid}")
-  public int deleteWidget(@PathVariable("wid") String wid) {
+  public int deleteWidget(@PathVariable("wid") Integer wid) {
     return service.deleteWidget(wid);
   }
 
@@ -52,7 +52,7 @@ public class WidgetController {
   }
 
   @GetMapping("/api/widgets/{wid}")
-  public Widget findWidgetById(@PathVariable("wid") String wid) {
+  public Widget findWidgetById(@PathVariable("wid") Integer wid) {
     return service.findWidgetById(wid);
   }
 }

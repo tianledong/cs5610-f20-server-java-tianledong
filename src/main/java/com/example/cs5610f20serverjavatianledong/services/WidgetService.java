@@ -1,86 +1,67 @@
 package com.example.cs5610f20serverjavatianledong.services;
 
 import com.example.cs5610f20serverjavatianledong.models.Widget;
+import com.example.cs5610f20serverjavatianledong.repositories.WidgetRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class WidgetService {
-  List<Widget> widgets = new ArrayList<>();
+
+  @Autowired
+  WidgetRepository widgetRepository;
 
   public List<Widget> findAllWidgets() {
-    return widgets;
+    return (List<Widget>) widgetRepository.findAll();
   }
 
-  public Widget findWidgetById(String widgetId) {
-    for (Widget w : widgets) {
-      if (w.getId().equals(widgetId))
-        return w;
-    }
-    return null;
+  public Widget findWidgetById(Integer widgetId) {
+    return widgetRepository.findById(widgetId).orElse(null);
   }
 
   public int updateAllWidgets(String tid, List<Widget> newWidgets) {
-    removeAllWidgets(tid, widgets);
-    widgets.addAll(newWidgets);
+    int order = 0;
+    for (Widget widget : newWidgets) {
+      widget.setWidgetOrder(order++);
+    }
+    widgetRepository.saveAll(newWidgets);
     return 1;
   }
 
-  private void removeAllWidgets(String tid, List<Widget> widgets) {
-    widgets.removeIf(widget -> widget.getTopicId().equals(tid));
-  }
-
   public Widget createWidget(String tid, Widget widget) {
-    String uuid = UUID.randomUUID().toString();
-    widget.setId(uuid);
     widget.setTopicId(tid);
-    widgets.add(widget);
-    return widget;
+    return widgetRepository.save(widget);
   }
 
-  public Integer updateWidget(
-          String widgetId,
-          Widget newWidget) {
-    for (Widget w : widgets) {
-      if (w.getId().equals(widgetId)) {
-        w.setName(newWidget.getName());
-        w.setType(newWidget.getType());
-        w.setCssClass(newWidget.getCssClass());
-        w.setHeight(newWidget.getHeight());
-        w.setWidth(newWidget.getWidth());
-        w.setWidgetOrder(newWidget.getWidgetOrder());
-        w.setText(newWidget.getText());
-        w.setSrc(newWidget.getSrc());
-        w.setSize(newWidget.getSize());
-        w.setStyle(newWidget.getStyle());
-        w.setValue(newWidget.getValue());
-        return 1;
-      }
+  public Integer updateWidget(Integer widgetId, Widget newWidget) {
+    Widget w = findWidgetById(widgetId);
+    if (w != null) {
+      w.setName(newWidget.getName());
+      w.setType(newWidget.getType());
+      w.setCssClass(newWidget.getCssClass());
+      w.setHeight(newWidget.getHeight());
+      w.setWidth(newWidget.getWidth());
+      w.setWidgetOrder(newWidget.getWidgetOrder());
+      w.setText(newWidget.getText());
+      w.setSrc(newWidget.getSrc());
+      w.setSize(newWidget.getSize());
+      w.setStyle(newWidget.getStyle());
+      w.setValue(newWidget.getValue());
+      widgetRepository.save(w);
+      return 1;
     }
     return 0;
   }
 
   public List<Widget> findWidgetsForTopic(String tid) {
-    List<Widget> topicWidgets = new ArrayList<>();
-    for (Widget widget : widgets) {
-      if (widget.getTopicId().equals(tid)) {
-        topicWidgets.add(widget);
-      }
-    }
-    return topicWidgets;
+    return widgetRepository.findWidgetsForTopic(tid);
   }
 
-  public int deleteWidget(String wid) {
-    for (Widget widget : widgets) {
-      if (widget.getTopicId().equals(wid)) {
-        widgets.remove(widget);
-        return 1;
-      }
-    }
-    return 0;
+  public int deleteWidget(Integer wid) {
+    widgetRepository.deleteById(wid);
+    return 1;
   }
 }
