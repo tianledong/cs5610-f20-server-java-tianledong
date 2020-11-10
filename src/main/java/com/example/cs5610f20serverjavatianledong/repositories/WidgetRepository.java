@@ -9,6 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface WidgetRepository extends CrudRepository<Widget, Integer> {
-  @Query(value = "SELECT * FROM widgets WHERE topicId=:topicId", nativeQuery = true)
+  @Query(value = "SELECT * FROM widgets WHERE topic_id=:topicId ORDER BY widget_order", nativeQuery = true)
   List<Widget> findWidgetsForTopic(@Param("topicId") String topicId);
 }
